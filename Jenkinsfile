@@ -1,11 +1,11 @@
 pipeline {
 
     agent any
-/*
+
 	tools {
         maven "maven3"
     }
-*/
+
     environment {
         ARTVERSION = "${env.BUILD_ID}"
         registry = "akashdhiman920/vproappdock"
