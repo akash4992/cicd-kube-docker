@@ -1,6 +1,9 @@
 pipeline {
 
-    agent any
+
+    agent {
+        label 'kops'
+    }
 
 	tools {
         maven "MAVEN3"
@@ -9,6 +12,7 @@ pipeline {
     environment {
         ARTVERSION = "${env.BUILD_ID}"
         registry = "akashdhiman920/vproappdock"
+        registryCredential = 'dockerhub'
     }
 
     stages{
