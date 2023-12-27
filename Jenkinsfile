@@ -101,7 +101,7 @@ pipeline {
 
         stage('Kubernetes Deploy') {
             steps {
-                    sh "helm upgrade --install --force vproifle-stack helm/vprofilecharts --set appimage=${registry}:${BUILD_NUMBER} --namespace prod"
+                    sh "helm upgrade --install --force vproifle-stack helm/vprofilecharts --set appimage=akashdhiman920/vproappdock:v17 --namespace prod"
             }
         }
 
