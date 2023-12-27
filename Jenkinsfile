@@ -1,9 +1,7 @@
 pipeline {
 
 
-    agent {
-        label 'kops'
-    }
+    agent any
 
 	tools {
         maven "MAVEN3"
